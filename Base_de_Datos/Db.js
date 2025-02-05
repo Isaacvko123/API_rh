@@ -11,7 +11,7 @@ const sequelize = new Sequelize(
     dialect: 'mysql',         // Tipo de base de datos
     logging: false,           // Desactiva logs de SQL en consola
     dialectOptions: {
-      connectTimeout: 10000,  // Tiempo de espera para la conexión (opcional)
+      connectTimeout: 100000,  // Tiempo de espera para la conexión (opcional)
     },
     define: {
       charset: 'utf8',
