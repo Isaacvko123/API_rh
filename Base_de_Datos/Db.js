@@ -1,6 +1,15 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
+// Mostrar en consola los valores que se están enviando desde el .env
+console.log('Configuración de conexión:', {
+  DB_NAME: process.env.DB_NAME,
+  DB_USER: process.env.DB_USER,
+  DB_PASSWORD: process.env.DB_PASSWORD ? '***' : null, // Oculta la contraseña en la consola
+  DB_HOST: process.env.DB_HOST,
+  DB_PORT: process.env.DB_PORT || 3306,
+});
+
 const sequelize = new Sequelize(
   process.env.DB_NAME,        // Nombre de la base de datos
   process.env.DB_USER,        // Usuario
